@@ -1,0 +1,44 @@
+\chapter{Atmosphere and Surface}
+
+While the bulk of the game takes place in the void of orbit, key interactions will take place in the Atmosphere and on the surface of planets and moons.
+
+\section{Atmosphere}
+Atmosphere is a separate layer. Only ships and launch assets with the `\textbf{Atmospheric}' special rule may enter atmosphere. Any other ships or launch assets that enter Atmosphere are destroyed. For the remainder of this section, assume all ships referred to have the Atmospheric rule.
+
+
+\subsection{Moving and Atmosphere}
+\subsubsection{Changing Layers}
+Ships may change layers between atmosphere and orbit at any point during their movement if their order allows turning. Ships can only change layers once per movement.
+\\\\
+Moving to atmosphere does not affect movement. Rising to orbit counts as moving 4" against a ships movement distance.
+
+\subsubsection{Moving in Atmosphere}
+Ships may only move a maximum of 2" through atmosphere in any one movement. This restriction overrides the minimum movement distances required by orders.
+
+\subsection{Firing and Atmosphere} \label{sec:AtmosphereShooting}
+Weapons fire that includes a source or target in atmosphere is reduced to lock 1 unless the firing weapon has a rule that matches its use case. A weapon that does not have the matching special rule for its target is \textbf{scrambled} by atmosphere.
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline
+	\textbf{Rule} & \textbf{Source} & \textbf{Target} \\
+	\hline
+	Re-Entry & Orbit & Atmosphere \\
+	\gray Escape Velocity & Atmosphere & Orbit \\
+	Air to Air* & Atmosphere & Atmosphere \\
+	\hline
+\end{tabular}
+\end{center}
+
+*: Air to Air - weapons with the A2A special rule increase their lock value by 1 when both source and target are in Atmosphere.
+
+\subsection{Atmosphere and Active Scan}
+Ships may not target enemy ships with Active Scan while in Atmosphere. Not that ships may select the Active Scan order in Atmosphere but cannot perform the actual spike placement.
+
+\section{Surface and Bombardment} \label{sec:SurfaceBombardment}
+The surface is a not a layer, and is only ever used for targeting. Weapons within Scan range of a surface site may target it with weapons, as surface targets do not have a signature. Any weapons that do not have the \textbf{Bombardment} special rule are reduced to Lock 1 when targeting surface sites. When a Bombardment weapon targets a ground site, its Lock is increased by 1. Critical hits against a surface site may be assigned to a features of the firing players choice, otherwise all damage is assigned to the site itself.
+
+\subsection{Surface Sites and Features}
+Surface sites are discrete locations on the map that act as scenario objectives, hosts to ground combat and platforms for features. Surface sites have hull points and take damage and armor saves like ships. Troops may be placed on surface sites. Features are attached to sites, providing combat capabilities and characteristic modifiers. Sites have access to all saving throws their features have. When a feature is reduced to 0 hull, it is destroyed and any benefits it granted are lost.
+
+\subsection{Bombardment and Troops}
+When a site or a feature takes damage, the firing player may destroy one enemy troop on the site (host site in the case of a feature). When a site is destroyed, all troops on it are destroyed.

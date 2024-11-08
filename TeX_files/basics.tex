@@ -1,0 +1,118 @@
+\chapter{The Basics}
+
+This section introduces some basic terms and definitions while highlighting components required to play the game.
+
+\section{Ship Characteristics}
+
+\begin{table}[ht]
+	\centering
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{|c|l|}
+	\hline
+	\textbf{Name} & What the ship type is called.\\
+	\hline
+	\textbf{Scan} & The base range at which the ship can obtain firing solutions on targets. \\
+	\hline
+	\textbf{Signature} & The base range at which the ship can located by enemy scanners. \\
+	\hline
+	\textbf{Thrust} & The base distance a ship can move. \\
+	\hline
+	\textbf{Hull} & The amount of damage a ship can take before being destroyed or rendered combat ineffective. \\
+	\hline
+	\textbf{Armor} & How string the ships armor is, and how likely it is to resist damage.  Compared against a rolled D6 to potentially mitigate damage.\\
+	\hline
+	\textbf{Point Defense} & The effectiveness of the active countermeasures onboard the ship \\
+	\hline
+	\textbf{Power} & How much weapons power the ship generates. \\
+	\endnote{This is in effect what 2.0 did as a replacement for '1 weapon' orders but gives more design space that the flat 1/2 system.} 
+	\textbf{Squadron} & The minimum and maximum number of ships of this class allowed in a single fleet organization slot. \\
+	\endnote{Squadron replaces the term group here to differentiate the two different levels of organization, as group was easy to confuse with battlegroup in conversation.} 
+	\textbf{Tonnage} & The strategic 'weight' of the ship, affecting initiative, fleet construction and objectives, values below: \\
+	\multicolumn{2}{|c|}{1/L, 2/L2, 5/M, 10/H, 15/S, 20/S2} \\
+	\hline
+	\textbf{Special} & Special traits the ship has.\\
+	\hline
+\end{tabular}}
+\end{table}
+
+\section{Weapon Characteristics}
+\begin{table}[ht]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{|c|l|}
+			\hline
+			\textbf{Name} & Name of the weapon.\\
+			\hline
+			\textbf{Lock} & How likely the weapon is to score hits on targets. Compared against a rolled D6 to determine whether a hit is scored. \\
+			\hline
+			\textbf{Attack} & How many dice are rolled when the weapon is fired. \\
+			\hline
+			\textbf{Damage} & The amount of hull that can be destroyed on an enemy ship hit by this weapon. \\
+			\hline
+			\textbf{Armor Penetration} & How Effective the weapon is at penetrating enemy armor. Compared to the armor value of targets. 
+			\endnote{The goal of this new characteristic is to provide a secondary dial for weapon damage that highly effects weapon performance versus armor, and makes lock alone less determinative. See Attack Sequence subsection.}\label{en:AP_characteristic}\\
+			\hline
+			\textbf{Low Power} & Indicates whether the weapon is powered or not. \\
+			\hline
+			\textbf{Close Action} & Indicates whether the weapon is limited to scan range \\
+			\hline
+			\textbf{Intercept} & Indicates whether the weapon can be mitigated by PD \\			
+			\hline
+			\textbf{Arc} & The angles around the ship the weapon can fire into. \\
+			\multicolumn{2}{|c|}{FN, F, FS, F/S(L), F/S(R), F/S/T} \\
+			\hline
+			\textbf{Special} & Special traits the weapon has.\\
+			\hline			
+	\end{tabular}}
+\end{table}\endnote{
+1.0 close action had three components, being able to fire if one other weapon is online, being in scan range and being intercept-able. For better clarity on each rule and more design space I am breaking those three components apart and making them core weapon traits. Low power being buffed essentially merges it into one of these traits.}
+
+\section{Components}
+
+Besides miniatures and terrain, these are components which help track information required to play the game
+
+\subsection{Dice and Target Numbers}
+This game uses size sided dice enumerated 1-6. When a value is marked with a $\triangledown$ it is a \underline{target number (TN)}, and each die rolled that is equal to or less than the target number succeeds. Each die greater than the target number fails. When dice are rolled as a part of a game step to determine the outcome of a random process, it is referred to as an \underline{event}.
+
+\subsubsection{Modifiers}
+Target numbers can be modified, but may never be increased to more than 5 or less than 1. When \underline{improving} a TN, add the modifier to the TN. When \underline{reducing} a TN, subtract the modifier from the TN. Modifiers that increase or decrease a die are applied before modifiers that set a value to specified number.
+
+\subsubsection{Rerolls}
+Effects that grant rerolls allow a dice rolled to be rolled again. The roll does not need to fail against it's TN to be rerolled. A single die can only be rerolled once per event, and the result of the reroll always stands, even if it is worse than the original.
+
+\subsubsection{Strategy Cards}
+Strategy Cards that can record Strategy Rank and member squadrons are required, or a suitable alternative. Whatever component is used should be able ot hide information until the card is flipped.
+
+\subsection{Info Tracking and Tokens}
+\subsubsection{Ship Information}
+Information for each ship that should be easily visible to all players.
+\begin{itemize}
+	\item Layer: a token to indicate if the ship is in atmosphere or orbit. Should be easily visible to all players.
+	\item Heat: a token to indicate the heat status of the ships. From one of the following states:
+	\begin{itemize}
+		\item Silent
+		\item Normal
+		\item Minor
+		\item Major
+	\end{itemize}
+	\item Hull/Damage: Remaining hull or total damage applied
+	\item Status Effects: System Status effects currently applied to the ship.
+\end{itemize}
+
+\subsubsection{Other Tokens}
+\begin{itemize}
+	\item Launch Assets:
+	\begin{itemize}
+		\item Fighters
+		\item Bombers
+		\item Torpedoes
+	\end{itemize}
+	\item Ground Troops
+	\item Cities
+\end{itemize}
+
+\subsection{Measuring Distances}
+Distances to or from ships are always measured to the central/designated flight stem of the ship. Surface sites and stations use a designated center point. Players may measure the distance between any two game objects at any point in time.
+
+\subsection{Traffic James and Base Contact}
+Ships exist as points on the table corresponding with the location of their flight stem. Ships do not physically interact with other ships, even if their bases would overlap or models contact each other. Just do your best. $\ddot\smile$

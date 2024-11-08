@@ -1,0 +1,269 @@
+\chapter{Activation Phase}
+
+In the activation phase, players will repeat combat rounds until all Battlegroups have activated. The steps of a combat round are:
+\begin{enumerate}
+	\item Flip Strategy Cards
+	\item Decide player order
+	\item First player activation
+	\item Second player activation
+\end{enumerate}
+Each combat round involves the Battlegroups on the flipped strategy cards.
+\\\\
+A player activation is:
+
+\begin{enumerate}	
+	\item Choose Special Orders
+	\item Squadrons Act
+	\begin{enumerate}
+		\item Initiate Repairs
+		\item Change Heat
+		\item Move
+		\item Shoot
+		\item Scan
+		\item Asset Resolution
+	\end{enumerate}
+		\item Complete Repairs
+\end{enumerate}
+Each squadron in the Battlegroup acts sequentially repeating steps 3a-3c. The order in which squadrons act is decided by the controlling player.
+Any damage or status applied during the activation phase is sequential.
+
+\section{Strategy Cards and Player Order}
+At the start of a new combat round, all players reveal one Strategy Card from the top of their Strategy Deck, that card becomes the player's active card for this combat round.
+\\\\
+Compare the Strategy Ranking of the two cards. The player whose card has the lower Strategy Ranking decides which player will be first activation and which will be second activation. 
+
+\subsubsection{Equal Strategy Ratings}
+IF the two active cards have the same Strategy Rating, each player rolls a die. The player who rolled higher wins and decides activation order. On a tie of the dice, reroll until one player wins.
+
+\subsubsection{Destroyed Battlegroups}
+If a card whose representative Battlegroup has been destroyed is reveal, discard it from the game and draw again. This does not apply if the active Battlegroup is destroyed during the First player activation, in which case the Second Player activation is simply skipped and the representative Strategy Card is removed.
+
+\section{Choose Special Orders}
+One squadron from the Battlegroup may be selected at this step to perform a special Order. Other squadrons that are within 12" of the selected squadron may also perform the same special order. Squadrons that do not receive or do not elect to use special orders use General Quarters. Before beginning Squadron activations, each squadron in the Battlegroup must choose what orders it is using.
+
+\section{Order Table}
+
+\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\textbf{Order} & \textbf{Move} (min to max) & \textbf{Turn} & \textbf{Weapon Power} & \textbf{Heat} \\
+	\hline
+	General Quarters & 1/2 to full & start & base & remove spike \\
+	\hline
+	\gray Course Change & 0 to 1/2 & start \& end & base & gain spike \endnote{I'm copying the 2.0 course change here as a fusion of Course Change and Station Keeping}\\
+	\hline
+	Max Thrust & full to 2x & start & 0 & gain spike \\
+	\hline
+	\gray Weapons Free & 1/2 to full & none & full & set to Major Spike \\
+	\hline
+	Silent Running & 1/2 to full & none & 0 & set to Silent Running \\
+	\hline
+	\gray Active Scan & 1/2 to full & none & base & set to Major Spike \\
+	\hline	
+\end{tabular}
+\begin{itemize}
+	\item \textbf{Move} provides the minimum and maximum distances that a ship may move.
+	\item \textbf{Turn} specifies when during the ships movement it may turn.
+	\item \textbf{Weapon Power} specifies which weapons power value the ship uses this turn.
+	\item \textbf{Heat} is the effect on a ships heat level. 
+\end{itemize}
+
+\section{Initiate Repairs}
+Any repairable status on an activated ship are set to 'repairing' state. Note that because this step occurs at the beginning of a ships activation, any status inflicted during the ship's activation are not set to be repaired.
+
+
+\section{Movement}
+When a squadron activates, all ships in the squadron may move individually as long as they end in positions that maintain squadron coherency. To move a ship, measure from the flight stem directly ahead. The minimum distance a ship can move is the minimum distance factor given by the order multiplied by the Thrust characteristic of the ship. The maximum distance a ship can move is the maximum distance factor given by the order multiplied by the Thrust characteristic of the ship.
+\\
+\textit{Example: A ship with Thrust 8" on General Quarters could move between 1/2*8"=4" and 1*8"=8".}
+
+\subsection{Turning}
+When a ship is allowed to turn, it may turn up to $45\deg$ in either direction. Orders that include `start' turning allow a ship to turn once  before it moves. The Course Change special order allows a ship to turn again after its movement. Turning counts as movement, even if the ship moves 0".
+
+\subsection{Hazards}
+Hazards are objects that cause damage to a ship when it enters a defined area of the board, typically terrain pieces. Each hazard defines the effect of the hazard on the ship. Apply hazard damage events after the ship finishes movement, before it starts firing.
+
+\section{Firing}
+After a group has moved, it may fire a number of a weapon systems given by its Orders.\\
+\textbf{Firing Procedure}
+\begin{enumerate}
+	\item Power Weapons
+	\item Check Detection Range and Arc
+	\item Allocate Attack Dice
+	\item Roll to Hit
+	\item Check Armor Piercing
+	\item Calculate damage inflicted
+	\item Apply Point Defense
+	\item Roll Saving throws
+	\item Deduct Hull Points
+	\item Roll for Crippling Damage
+	\item Apply status OR roll for catastrophic damage
+\end{enumerate}
+Note that while it may be convenient to fire each weapon individually for rolling purposes, all weapons count as being fired simultaneously, performing each step at the same time.
+
+\subsection{Power Weapons}
+A ship generates weapons power at the beginning of it's firing sequence based on its order and special rules. When a ship generates base power, it gains the first power value. When a ship generates full power it generates its second power value. A ship taking 0 power orders does not generate weapons power.
+\\\\
+Each weapon a ship fires requires spending one weapons power. Power cannot be stored between turns, any remaining power is lost in the resolution phase.
+
+\subsubsection{Low Power}
+Weapons with the \textbf{Low Power} indicator do not cost power to fire as long as the ship generated at least one power this turn.
+
+\subsection{Check Detection Range and Arc}
+To fire a weapon system at a target, the target must be both:
+\begin{itemize}
+	\item Within Detection Range
+	\item In weapon arc
+\end{itemize}
+Detection range is the Scan of the firing ship plus the Effective Signature of the target ship, minus negative modifiers.
+\\\\
+Weapon arc is the angles in which the weapon can fire. Use the base markings of the firing ship and draw a line to the target ship. Weapons that match the intersected arc of the firing ships base may fire at that target.
+
+\subsubsection{Close Action Weapons}
+Weapons with the \textbf{Close Action} indicator do not consider target effective signature when measuring Detection range, and thus may only fire within scan range.
+
+\subsection{Allocate Attack Dice}
+The Attack value of a weapon profile is the number of Attack Dice that are rolled when the weapon is fired. Each weapon system being fired must allocate all Attack Dice to a single target unless the weapon system has a special rule that allows it to multi-target. Ships may allocate against different targets with different weapons.\\\\
+\textbf{All of a squadron's Attack Dice must be allocated before any rolls to hit are made.}
+
+\subsection{Roll to Hit}
+The base TN for rolling to hit is the Lock$\triangledown$ characteristic of the weapon being fired. Apply any modifiers to Lock TN and then roll all allocated Attack Dice. Each die that succeeds is a hit, and each die that is 2 or more lower than the TN is a \underline{critical hit}.
+
+\subsection{Check Armor Piercing}
+Each weapon has an Armor Piercing (AP) value. If the AP value of a weapon is higher than the Armor value of the target, any critical hits scored are also \underline{armor piercing hits}.
+
+\subsection{Calculate Damage Applied}
+Each hit applies damage equal to it's damage value to the target, keeping track of how much damage was applied by critical hits separately as critical damage. Some of this damage may be mitigated by point defense or saved by armor saves.
+
+\subsection{Apply Point Defense} \label{sec:PointDefense}
+A ship with unsaved damage by weapons with the \textbf{Intercept} indicator may apply its point defense to mitigate damage. Upon suffering interceptable damage, the target ship generates PD points equal to its PD characteristic. The controlling player of the target ship may remove damage using it's Point Defense points:
+\begin{itemize}
+	\item 1 PD removes 1 damage
+	\item 2 PD removes 1 critical damage
+\end{itemize}
+After all PD points have been used or there is no more damage that can be removed, proceed to saves. \endnote{With intercept weapons back, PD is now becoming automatic to save rolling time.}
+\\\\
+Note that all damage with Intercept dealt within a single squadron activation is mitigated in one step. If two weapons with Intercept are fired at a target, it applies PD against the combined damage pool of both, not each individually.
+
+\subsection{Roll Saving Throws}
+Unless caused by an armor piercing hit or other special rule that ignores armor, each point of damage may be saved against by rolling a D6 for each point of applied damage. The base TN for an armor save is the Armor$\triangledown$ value of the ship. Apply any modifiers to armor value and then roll. Each die that succeeds removes 1 damage. Each die that fails results in 1 damage inflicted.
+
+\subsubsection{Shield Saves}
+Shield saves may be taken even against armor piercing hits. Ships with Shields will have a secondary save in their Armor Characteristic after a / sybol, and have special rules governing when the shield save may be used.
+
+\subsection{Deduct Hull Points}
+For each damage inflicted, deduct 1 hull from the remaining hull of the target ship. After all damage inflicted has been applied, check for secondary results:
+\begin{itemize}
+	\item Capital Ship at 1/2 Hull : Roll for crippling damage
+	\item L ship reduced to 0 Hull : Target Destroyed
+	\endnote{I followed 2.0 in omitting crippling and catastrophic for L ships because it saves a lot of time rolling for the more numerous ships and helps L ships be more competitive instead of popping off in chain reactions after 2 damage.}
+	\item Capital Ship reduced to 0 Hull : Target Destroyed + Roll for Catastrophic Damage
+\end{itemize}
+
+\subsection{Roll for Crippling Damage}
+
+When a ship suffers crippling damage, roll 3D6 and sort the dice by value, then use the middle die to determine which status effect is applied:
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Die} & \textbf{Result} \\
+		\hline
+		1 & Weapons Offline\\
+		\hline
+		\gray 2 & Fire\\
+		\hline
+		3 & Scanners Offline\\
+		\hline
+		\gray 4 & Energy Surges\\
+		\hline
+		5 & Engines Offline\\
+		\hline
+		\gray 6 & Armor Cracked\\
+		\hline	
+	\end{tabular}
+\end{center}
+\endnote{There are a few things going on here:
+\begin{itemize}
+	\item Goal is to make each crippling result really matter, no more 'dud' results
+	\item I decided to remove damage repair rolls and make all repairable results auto repaired. In 1.0 the rolls were a coin toss without much player interaction other than command cards. In 2.0 the damage control order could help but it put your ship largely out the fight for a turn, which reduces your combat effectiveness almost as much as the damage result. In a game with so few turns, I wanted to shift the focus towards a predictable window where you have to temporarily change your plans, and the enemy can exploit that gap. To that end I decided rolling for damage repair was not worth the time.
+	\item This throws orbital decay out the window. Orbital decay had outsized rng influence in usually not mattering but occasionally 1 hit killing big ships, which is too much swing for me. 
+	\end{itemize}}
+
+If three or more crippling dice are of the same value, the ship additionally suffers that value in damage. This damage cannot be saved.\\\\
+If a damage result the ship already has is rolled, the player inflicting the crippling damage may choose one other rolled dies value to use or apply 2 damage. This damage cannot be saved.
+
+\subsubsection{Fire}
+Add a fire token to the ship. In each resolution step, if the ship took special orders, it takes 1 unsaveable damage for each fire token on it. If the ship took standard orders, remove one fire token. Permanent. This crippling result may be repeated, each result adding a fire token. \endnote{My goal here is to make fire interactive. Especially since damage control is now automatic, simply applying a little bit more damage later doesn't make sense. The fire result encourages players to go on GQ with a predictable cost/risk if they don't.}
+
+\subsubsection{Weapons Offline}
+The ship cannot generate weapons power and counts as being at weapon power 0, regardless of whatever order it last used. Repairable.
+
+\subsubsection{Scanners Offline}
+The scan value of the ship is reduced to 1". Repairable.
+
+\subsubsection{Energy Surges}
+The ship may not use special orders. Repairable.
+
+\subsubsection{Engines Offline}
+The ship's Thrust reduced to 50\% (round up) and it cannot turn. Repairable.
+
+\subsubsection{Armor Cracked}
+The ships armor value is reduced by 1. Permanent.
+
+\subsection{Apply Status}
+Any statuses, including crippling results, side effects of weapons are applied if the ship is not destroyed.
+
+\subsection{Catastrophic Damage}
+When a Capital ship is destroyed, roll for Catastrophic Damage. Roll 3D6 and sort the dice, using the middle value. The result is applied to all ships and stations within explosion range in orbit. Explosion range is based on ship tonnage. Heavy and Superheavy ships add additional damage to any damage result rolled.
+
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Die} & \textbf{Outcome} & \textbf{Result} \\
+		\hline
+		1 & Reactor Pulse & Energy Surge \\
+		\hline
+		\gray 2 & Burn Up & No Result \\
+		\hline
+		3 & Bright Flash & Gain a spike \\
+		\hline
+		\gray 4 & Detonation & 2 damage, saves may be used\\
+		\hline
+		5 & Overload & 2 damage, saves may \textbf{not} be used\\
+		\hline
+		\gray 6 & Foldspace Collapse & 2D3 damage, saves may \textbf{not} be used\\
+		\hline	
+	\end{tabular}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Ship Tonnage} & M & H & S/S2 \\
+		\textbf{Bonus Damage} & 0 & 1 & 2 \\
+		\textbf{Explosion Range} & 4" & 6" & 8" \\
+		\hline
+	\end{tabular}
+\end{center}
+\endnote{Keeping the deterministic explosion range from 2.0 but reusing the curved D6 mechanic to control the odds of more significant events. Adding a low probability energy surge instead of the 1 damage result or K/E result from 2.0}
+
+\subsubsection{Chain Effects}
+
+If two or more events are caused at the same time by damage from a Catastrophic Damage result, the player who inflicted the Catastrophic Damage decides the order in which they are resolved. Resolve all events caused by one Catastrophic Damage result before moving onto others.
+
+\subsection{Multi-Targeting}
+
+Some weapons are able to target multiple ships of the same class in proximity. When a weapon with a special rule that allows multi-targeting enters the allocate attack dice step, it may declare a number of multi-attack targets, each of which must be a valid target for the firing ship. Multi attack targets must be all of the same ship class and within group coherency of each other. When taking saves against a multi-target attack, use the best save of all targets. When a multi-targeting attack causes targets to suffer damage, apply damage against the ship with lowest remaining hull first. When a multi-target is destroyed by the attack, assign damage suffered to the multi-target with the next lowest hull remaining and so on, until all damage suffered is assigned to a ship.\\\\
+If two or more weapons in a squadron use a multi-targeting weapon they must select the same multi-targets entirely or no common targets at all.
+
+\subsubsection{Multi-Targeting and Point Defense}
+When a weapon with Intercept Multi-Targets, apply the total PD of all multi-targets before rolling saves. \endnote{This is a part I don't like but I couldn't think of another way to do it. In practice the only multi-targeting weapons will be big rare guns or networked lights that use squadron mitigate the effects anyways.}
+
+\subsection{Active Scan}
+In the scan step, one ship per squadron that is using the Active Scan order may select an enemy ship in Active Scan range to Active Scan it, adding a spike to the target. Active Scan is calculated exactly like weapons range, but doubled. Terrain that reduces or blocks weapons range also reduces or blocks Active Scan range.
+
+\subsection{Resolution}
+In this step various status and launch effects attached to the ship resolve.
+
+\section{Complete Repairs}
+Any repairable status effects on the ship in the `repairing' state are set to `completed', but remain in effect until removed.
+
+\section{End of the Activation Phase}
+When all remaining Battlegroups have been activated, the Activation Phase is over and the troop phase begins.
+

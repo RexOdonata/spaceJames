@@ -1,0 +1,95 @@
+\chapter{Launch Phase}
+
+In the launch phase, ships with the Launch rule may deploy launch assets. The Launch phase has the following steps:
+\begin{enumerate}
+	\item Cleanup
+	\item Launch Activations
+	\item Resolution
+\end{enumerate}
+
+\section{Cleanup}
+In this step, Torpedoes launched in the previous turn activate and any remaining Strikecraft from last turn are removed.
+
+\section{Launch Activation}
+
+Randomize which player goes first, then move through each category of launch. In each category, players alternate activating a squadron that has launch of the current category or passing.
+ \begin{enumerate}
+ 	\item Torpedoes and Mines
+ 	\item Bombers
+ 	\item Fighters
+ 	\item Landing Craft
+ \end{enumerate}
+ When a player passes, that player cannot launch any more assets of that category this turn. Players automatically pass if they have no carriers that can launch the current category.
+ \\\\
+ Move onto the next category when both players have passed. When the troopship phase is over, the Launch Phase ends.
+ \\\\
+ When a squadron is activated, each ship within may choose one or more launch profiles that have an asset of the current category and then choose a number of assets to deploy along with targets for each. The first time a ship launches in each turn, it gains a spike. Place any launched assets on their targets.
+ 
+ \subsection{Launch Eligibility}
+ Carriers must have generated at least one weapons power this turn in order to launch.
+
+\section{Carrier Characteristics}
+
+All ships with launch will have an additional launch table listing its launch profiles. Each launch profile has characteristics:
+\begin{itemize}
+	\item \textbf{Load}: The type(s) of launch assets the carrier can launch using this profile.
+	\item \textbf{Launch}: How launch assets of this profile the carrier can launch in one turn.
+	\item \textbf{Special}: Special rules attached to this launch profile.
+\end{itemize}
+The load of a launch profile can include two or more types of asset (for example, Fighters \& Bombers). For launch profiles with multiple asset types, the carrier can launch any combination of those asset types as long as the total launched is less the the Launch characteristic of the profile.
+
+\subsection{Launch Thrust}
+Launch Assets have thrust characteristics. \textbf{Single Thrust} is up one Thrust distance away from the host carrier. \textbf{Double Thrust} is up to two Thrust distances away from the host carrier.
+
+\subsection{Launch States}
+\begin{itemize}
+	\item \textbf{Placed}: The Asset is attached to its target but currently has no effect.
+	\item \textbf{Set}: The Asset is attached to its target and can be triggered.
+	\item \textbf{Resolved}: The Asset is currently affecting its target. After resolution effects the asset is removed.
+\end{itemize}
+
+\section{Launch Types}
+
+\subsection{Strike Craft : Fighters and Bombers}
+
+Strikecraft that are within single thrust distance of their target set and resolve in the upcoming Launch Resolution step of this phase. Strike craft that are within double thrust distance of their target are placed on their asset and set at the end of the Resolution step, then resolve in the Resolution step of the target.
+
+\subsubsection{Fighters}
+Fighters have a \textbf{Point Defense Bonus} (PDB) characteristic.
+\\\\
+When a Fighter is set on a friendly target, anytime that target takes damage from a weapon with \textbf{Intercept}, any number of friendly fighter tokens may be consumed. Each Fighter token consumed adds its own PDB to the PD of the target. Fighers do not resolve, and remain set until activated or cleaned up.
+\\\\
+When a fighter is set on an enemy target, remove one enemy fighter from the target. \endnote{The intent here is that fighers and bombers now act the same when double thrusting, so there is more of an incentive to place your defensive carriers closer to the action.}
+
+\subsubsection{Bombers}
+When a Bomber resolves it attacks the target, with all bomber attacks on a target combining into a single damage pool. All bomber attacks have \textbf{Intercept} and are vulnerable to PD mitigation. Bombers count as being within scan range for the effects of any weapons applied, and any special rules applied on hit are applied at most once. 
+
+\subsection{Landing Craft}
+Landing craft land troops on surface sites and space stations. Landing Craft can only single thrust. When resolving in the current launch resolution phase, strike craft create troop tokens on the target. All landing craft are atmospheric.
+
+\subsubsection{Dropships}
+Dropships must select targets in the same layer as their host. Dropships create 1 troop token. Dropships have a Thrust of 3" unless otherwise stated.
+
+\subsubsection{Bulk Landers}
+Bulk landers create 3 troop tokens. If enemy troops are present on the target, place 2 instead. Bulk landers have a Thrust of 3" unless otherwise stated.
+
+\endnote{Taking the concept of 2.0 bulk landers but making it a bit more friendly, as bulk landers only dropping 2 troops made them not very cost effective compared to strike carriers.}
+
+\subsection{Torpedoes}
+Torpedoes target a position in orbit and can only single thrust. In the cleanup step, each torpedo can select an enemy ship or station to target within single thrust range, then move to and attack it with its weapon profile. Torpedoes reduce the TN of scenery obstructions by 1. If a torpedo does not hit a target in the cleanup step, it is removed.
+\\\\
+Players may alternate selecting targets for torpedoes following the same order as launch activation.
+
+\endnote{Mixing it up with torpedoes here. The goal is to create a sort of loitering munition that can threaten entire areas to make Torpedoes a more strategic tool. Rolling to dodge enemy torpedoes was based on a single D6 roll that felt very swingy and not very interactive. The goal here is to create a known threat area - get out or get hit - that both players can easily strategist around without a 16\% chance of the entire thing being moot. NOTE that Torpedoes are launched AFTER the cleanup step, so torpedoes will be on the map for one whole turn before they seek a target, giving time for people to get out of the way or take the hit.}
+
+\subsubsection{Mines}
+Mines target a position in orbit, can only single thrust and set in the resolution step of the current launch phase. Mines are \textbf{NOT} cleaned up in the cleanup step.
+
+\subsubsection{Mine Trigger}
+If an enemy ship moves into the thrust range of a mine at any point during movement, the mine may be triggered by its controller. The mine resolves a weapon attack against the target ship during its resolution step. Note that mines do not trigger against ships that started their movement within the thrust range of the mine.
+
+\subsubsection{Mine Sweeping}
+Two fighters can be assigned to a mine. If 2 fighters are set on a mine, remove the mine.
+
+\section{Launch Travel}
+Launch Assets always moves in a straight line from host ship or current position to target. If an asset moves through scenery, the scenery may destroy the asset, depending on the scenery type. If the scenery has a obstruction characteristic, the opposing player rolls a D6 for each launch asset against the obstruction value. Each success removes one asset.
